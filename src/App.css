@@ -36,21 +36,21 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 70px; /* slightly wider */
     margin-bottom: 40px;
 }
 
 /* ✍️ Text Styling */
 .text-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 3.4rem; /* slightly bigger */
+    margin-bottom: 10px;
     color: #fff9f9;
     text-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
     0 0 50px rgba(255, 215, 0, 0.6);
 }
 
 .text-section p {
-    font-size: 1.6rem;
+    font-size: 1.5rem; /* slightly larger */
     color: #fff;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
@@ -60,27 +60,25 @@ body, html {
     text-shadow: 0 0 20px #fff8b5, 0 0 40px #ffe600;
 }
 
-/* 🎂 Main Image (vertical, with spacing from top & left) */
+/* 🎂 Main Image (vertical & centered) */
 .image-section .main-image {
-    height: 600px;
+    height: 520px; /* increased */
     width: auto;
     object-fit: contain;
     border-radius: 40px;
     border: 5px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.8),
-    0px 0px 80px rgba(255, 215, 0, 0.5);
-    transform: none;
-    margin-top: 50px;   /* 🟢 Increased top margin */
-    margin-left: 80px;
-    margin-right:20px; 🟢 Added more left margin */
+    box-shadow: 0px 0px 55px rgba(255, 255, 255, 0.8),
+    0px 0px 70px rgba(255, 215, 0, 0.5);
+    margin: 40px 50px;
+    margin-top: 25px;
+    margin-left: 45px;
 }
 
 /* 🧑‍🤝‍🧑 Friends Row */
 .friends-section {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-bottom: 40px; /* 🟢 Added bottom margin */
+    gap: 45px;
 }
 
 .friend-card {
@@ -88,24 +86,24 @@ body, html {
 }
 
 .friend-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 30px;
+    width: 160px; /* slightly bigger */
+    height: 160px;
+    border-radius: 28px;
     border: 5px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.7),
-    0px 0px 60px rgba(255, 182, 193, 0.5);
+    0px 0px 55px rgba(255, 182, 193, 0.5);
     object-fit: cover;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .friend-img:hover {
-    transform: scale(1.2);
+    transform: scale(1.18);
     box-shadow: 0px 0px 70px rgba(255, 255, 255, 1);
 }
 
 .friend-name {
-    margin-top: 14px;
-    font-size: 1.4rem;
+    margin-top: 12px;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #fff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
@@ -127,22 +125,22 @@ canvas {
 /* 💫 Marathi Text Styling */
 .wish-text {
     margin-top: 25px;
-    font-size: 1.6rem;
-    line-height: 1.9;
+    font-size: 1.5rem;
+    line-height: 1.8;
     color: #fff;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .final-wish {
     margin-top: 30px;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     color: #ffeb3b;
     text-shadow: 0 0 30px #fff8b5, 0 0 50px #ffe600;
 }
 
 .gang-text {
     margin-top: 12px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-style: italic;
     color: #fce4ec;
 }
