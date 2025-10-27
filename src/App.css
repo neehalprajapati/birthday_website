@@ -245,7 +245,7 @@ canvas {
 /* Small mobile adjustments */
 @media (max-width: 480px) {
     .text-section h1 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .text-section p {
@@ -253,7 +253,7 @@ canvas {
     }
 
     .friend-card {
-        width: calc(50% - 10px);
+        width: calc(50% - 12px);
     }
 
     .friend-img {
@@ -268,7 +268,7 @@ canvas {
 /* Extra small devices */
 @media (max-width: 360px) {
     .text-section h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .friend-card {
