@@ -1,0 +1,148 @@
+/* Remove scrollbar & center everything */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+/* 🎨 Background Gradient (soft yet glowing) */
+.birthday-page {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #7f00ff, #e100ff, #ff6f91, #ffc3a0);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ✨ Background animation */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🎁 Main Section Layout */
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+/* ✍️ Text Styling */
+.text-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #fff9f9;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
+    0 0 50px rgba(255, 215, 0, 0.6);
+}
+
+.text-section p {
+    font-size: 1.6rem;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.name {
+    color: #ffea00;
+    text-shadow: 0 0 20px #fff8b5, 0 0 40px #ffe600;
+}
+
+/* 🎂 Main Image (vertical, with spacing from top & left) */
+.image-section .main-image {
+    height: 600px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 40px;
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.8),
+    0px 0px 80px rgba(255, 215, 0, 0.5);
+    transform: none;
+    margin-top: 50px;   /* 🟢 Increased top margin */
+    margin-left: 80px;
+    margin-right:20px; 🟢 Added more left margin */
+}
+
+/* 🧑‍🤝‍🧑 Friends Row */
+.friends-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px; /* 🟢 Added bottom margin */
+}
+
+.friend-card {
+    text-align: center;
+}
+
+.friend-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 30px;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.7),
+    0px 0px 60px rgba(255, 182, 193, 0.5);
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.friend-img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 70px rgba(255, 255, 255, 1);
+}
+
+.friend-name {
+    margin-top: 14px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+
+/* 🎉 Confetti Overlay */
+canvas {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.birthday-page * {
+    z-index: 2;
+    position: relative;
+}
+
+/* 💫 Marathi Text Styling */
+.wish-text {
+    margin-top: 25px;
+    font-size: 1.6rem;
+    line-height: 1.9;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.final-wish {
+    margin-top: 30px;
+    font-size: 2.8rem;
+    color: #ffeb3b;
+    text-shadow: 0 0 30px #fff8b5, 0 0 50px #ffe600;
+}
+
+.gang-text {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #fce4ec;
+}
