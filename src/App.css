@@ -1,4 +1,8 @@
 /* 🌍 Base Reset */
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -21,7 +25,9 @@ body, html {
     text-align: center;
     color: white;
     position: relative;
-    overflow-y: auto; /* ✅ allow vertical scroll on small screens */
+    overflow-y: auto; /* ✅ Scroll enabled for mobile */
+    padding: 40px 20px;
+    z-index: 0;
 }
 
 /* ✨ Background animation */
@@ -31,19 +37,24 @@ body, html {
     100% { background-position: 0% 50%; }
 }
 
-/* 🎁 Main Section */
+/* 🎁 Main Section Layout */
 .main-section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 70px;
     margin-bottom: 40px;
-    flex-wrap: wrap; /* ✅ make it stack on small screens */
+    flex-wrap: wrap;
 }
 
-/* ✍️ Text Section */
+/* ✍️ Text Styling */
+.text-section {
+    max-width: 500px;
+    z-index: 3; /* ✅ Keeps text visible over confetti */
+}
+
 .text-section h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     margin-bottom: 10px;
     color: #fff9f9;
     text-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
@@ -63,22 +74,24 @@ body, html {
 
 /* 🎂 Main Image */
 .image-section .main-image {
-    height: 480px;
+    height: 500px;
     width: auto;
     object-fit: contain;
-    border-radius: 30px;
+    border-radius: 40px;
     border: 5px solid rgba(255, 255, 255, 0.9);
     box-shadow: 0px 0px 45px rgba(255, 255, 255, 0.8),
     0px 0px 60px rgba(255, 215, 0, 0.5);
     margin: 30px 40px;
+    z-index: 2;
 }
 
-/* 🧑‍🤝‍🧑 Friends Section */
+/* 🧑‍🤝‍🧑 Friends Row */
 .friends-section {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* ✅ stack on small screens */
-    gap: 35px;
+    flex-wrap: wrap;
+    gap: 40px;
+    z-index: 3;
 }
 
 .friend-card {
@@ -86,12 +99,12 @@ body, html {
 }
 
 .friend-img {
-    width: 140px;
-    height: 140px;
-    border-radius: 25px;
-    border: 4px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.7),
-    0px 0px 45px rgba(255, 182, 193, 0.5);
+    width: 150px;
+    height: 150px;
+    border-radius: 28px;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.7),
+    0px 0px 55px rgba(255, 182, 193, 0.5);
     object-fit: cover;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -102,20 +115,21 @@ body, html {
 }
 
 .friend-name {
-    margin-top: 10px;
-    font-size: 1.2rem;
+    margin-top: 12px;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #fff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
 }
 
-/* 💫 Marathi Text */
+/* 💫 Marathi Text Styling */
 .wish-text {
     margin-top: 25px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1.8;
     color: #fff;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    z-index: 3;
 }
 
 .final-wish {
@@ -123,16 +137,18 @@ body, html {
     font-size: 2.4rem;
     color: #ffeb3b;
     text-shadow: 0 0 30px #fff8b5, 0 0 50px #ffe600;
+    z-index: 3;
 }
 
 .gang-text {
     margin-top: 12px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-style: italic;
     color: #fce4ec;
+    z-index: 3;
 }
 
-/* 🎉 Confetti Overlay */
+/* 🎉 Confetti Layer */
 canvas {
     position: fixed !important;
     top: 0;
@@ -140,12 +156,7 @@ canvas {
     z-index: 1;
 }
 
-.birthday-page * {
-    z-index: 2;
-    position: relative;
-}
-
-/* 📱 Responsive Breakpoints */
+/* 📱 Responsive Design */
 
 /* Tablets */
 @media (max-width: 1024px) {
@@ -156,7 +167,6 @@ canvas {
 
     .image-section .main-image {
         height: 420px;
-        margin: 20px;
     }
 
     .text-section h1 {
@@ -164,14 +174,14 @@ canvas {
     }
 
     .text-section p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
 
-/* Mobile Devices */
+/* Mobile */
 @media (max-width: 768px) {
     .birthday-page {
-        padding: 20px;
+        padding: 30px 15px;
     }
 
     .main-section {
@@ -180,8 +190,7 @@ canvas {
     }
 
     .image-section .main-image {
-        height: 350px;
-        margin: 15px;
+        height: 360px;
     }
 
     .text-section h1 {
@@ -193,28 +202,24 @@ canvas {
     }
 
     .friend-img {
-        width: 110px;
-        height: 110px;
+        width: 120px;
+        height: 120px;
     }
 
     .friend-name {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .wish-text {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .final-wish {
         font-size: 2rem;
     }
-
-    .gang-text {
-        font-size: 1rem;
-    }
 }
 
-/* Very Small Phones */
+/* Small Phones */
 @media (max-width: 480px) {
     .text-section h1 {
         font-size: 1.8rem;
@@ -229,11 +234,11 @@ canvas {
     }
 
     .friend-img {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
     }
 
     .final-wish {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 }
